@@ -58,7 +58,7 @@ def list_versions():
     if platform:
         versions = [v for v in versions if v.supports_platform(platform)]
 
-    names = [version.version for version in versions]
+    names = sorted([version.version for version in versions])
     response = app.make_response('\n'.join(names) + '\n')
     response.headers['Content-Type'] = 'text/plain'
     return response
