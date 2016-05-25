@@ -4,6 +4,9 @@ import os
 import glob
 import yaml
 import flask
+from flask_hal import HAL
+from flask_hal.document import Document
+from flask_hal.link import Collection, Link
 
 
 class Version(object):
@@ -42,6 +45,14 @@ class Version(object):
 
 VERSIONS = Version.versions()
 app = flask.Flask(__name__)
+HAL(app)
+
+
+@app.route('/')
+def root():
+    return Document(links=Collection(
+        Link('versions', '/versions'),
+    ))
 
 
 @app.route('/versions')

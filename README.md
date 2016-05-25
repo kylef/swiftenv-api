@@ -1,4 +1,4 @@
-# swiftenv API
+# Swift Version API
 
 API for [swiftenv](https://swiftenv.fuller.li/) to return the available
 versions of Swift.
@@ -7,8 +7,10 @@ An instance of the API is deployed at https://swiftenv-api.fuller.li/.
 
 ## Versions [/versions{snapshots,platform}]
 
+Returns the available versions of Swift.
+
 + Parameters
-    + snapshots (boolean) - Can be
+    + snapshots: false (boolean) - Used to filter for snapshot versions.
     + platform: osx - Filter for versions that have binary releases for the given platform.
 
 + Response 200 (text/plain)
