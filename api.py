@@ -20,7 +20,7 @@ def filter_versions():
     Filters versions for the current request.
     """
 
-    snapshots = flask.request.args.get('snapshots')
+    snapshots = flask.request.args.get('snapshots', flask.request.args.get('snapshot'))
     platform = flask.request.args.get('platform')
 
     if snapshots == 'true':
