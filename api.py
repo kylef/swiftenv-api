@@ -5,47 +5,30 @@ import glob
 import yaml
 import flask
 from flask_hal import HAL
-from flask_hal.document import Document
+from flask_hal.document import Document, Embedded
 from flask_hal.link import Collection, Link
 
-
-class Version(object):
-    @classmethod
-    def versions(cls):
-        version_files = glob.glob('versions/*.yaml')
-        return list(map(Version.fromfile, version_files))
-
-    @classmethod
-    def fromfile(cls, path):
-        version = os.path.splitext(os.path.basename(path))[0]
-
-        with open(path) as fp:
-            content = yaml.load(fp.read())
-            binaries = content['binaries']
-
-        return cls(version, binaries)
-
-    def __init__(self, version, binaries):
-        self.version = version
-        self.binaries = binaries
-
-    def __str__(self):
-        return self.version
-
-    @property
-    def is_snapshot(self):
-        return 'SNAPSHOT' in self.version
-
-    def supports_platform(self, platform):
-        """
-        Returns if the version has a binary release for the given platform.
-        """
-        return platform in self.binaries
+from versions import Version
 
 
-VERSIONS = Version.versions()
 app = flask.Flask(__name__)
 HAL(app)
+
+
+def filter_versions():
+    """
+    Filters versions for the current request.
+    """
+
+    snapshots = flask.request.args.get('snapshots')
+    platform = flask.request.args.get('platform')
+
+    if snapshots == 'true':
+        snapshots = True
+    else:
+        snapshots = False
+
+    return Version.objects.filter(snapshots=snapshots, platform=platform)
 
 
 @app.route('/')
@@ -55,24 +38,27 @@ def root():
     ))
 
 
+@app.route('/versions/<name>')
+def version_detail(name):
+    version = Version.objects.get(version=name)
+    links = [Link(rel, url) for (rel, url) in version.binaries.items()]
+    return Document(data={'version': version.version}, links=Collection(*links))
+
+
 @app.route('/versions')
-def list_versions():
-    versions = VERSIONS
+def list_text_versions():
+    versions = filter_versions().versions
 
-    snapshots = flask.request.args.get('snapshot')
-    if snapshots == 'true':
-        versions = [v for v in versions if v.is_snapshot]
-    elif snapshots == 'false':
-        versions = [v for v in versions if not v.is_snapshot]
+    if 'text/plain' in flask.request.accept_mimetypes.values():
+        names = [str(v) for v in versions]
+        response = app.make_response('\n'.join(names) + '\n')
+        response.headers['Content-Type'] = 'text/plain'
+        return response
 
-    platform = flask.request.args.get('platform')
-    if platform:
-        versions = [v for v in versions if v.supports_platform(platform)]
+    def to_embedded(v):
+        return Embedded(links=Collection(Link('self', '/versions/{}'.format(v.version))))
 
-    names = sorted([version.version for version in versions])
-    response = app.make_response('\n'.join(names) + '\n')
-    response.headers['Content-Type'] = 'text/plain'
-    return response
+    return Document(embedded=dict([(v.version, to_embedded(v)) for v in versions]))
 
 
 if __name__ == '__main__':

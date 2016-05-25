@@ -1,6 +1,6 @@
 import unittest
 
-from api import Version
+from versions import Version
 
 
 class VersionTests(unittest.TestCase):
@@ -21,5 +21,5 @@ class VersionTests(unittest.TestCase):
         self.assertFalse(version.supports_platform('test'))
 
     def test_versions(self):
-        versions = Version.versions()
+        versions = Version.objects.versions
         self.assertTrue(len(versions) > 0)
