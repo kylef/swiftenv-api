@@ -3,6 +3,19 @@
 API for [swiftenv](https://swiftenv.fuller.li/) to return the available
 versions of Swift.
 
+An instance of the API is deployed at https://swiftenv-api.fuller.li/.
+
+## Versions [/versions{snapshots,platform}]
+
++ Parameters
+    + snapshots (boolean) - Can be
+    + platform: osx - Filter for versions that have binary releases for the given platform.
+
++ Response 200 (text/plain)
+
+        2.2
+        2.2.1
+
 ## Development Environment
 
 You can configure a development environment with the following:
