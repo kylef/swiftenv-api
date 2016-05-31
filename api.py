@@ -45,6 +45,18 @@ def version_detail(name):
     return Document(data={'version': version.version}, links=Collection(*links))
 
 
+@app.route('/versions/<name>/binaries/<platform>')
+def binary_detail(name, platform):
+    version = Version.objects.get(version=name)
+    binary = version.binaries.get(platform)
+    if not binary:
+        raise flask.abort(404)
+
+    response = app.make_response(binary)
+    response.headers['Content-Type'] = 'text/plain'
+    return response
+
+
 @app.route('/versions')
 def list_text_versions():
     versions = filter_versions().versions
