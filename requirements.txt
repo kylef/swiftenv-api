@@ -1,5 +1,6 @@
 Flask==0.10.1
 Flask-HAL==1.0.3
+Flask-Negotiate==0.1.0
 gunicorn==19.6.0
 itsdangerous==0.24
 Jinja2==2.8
