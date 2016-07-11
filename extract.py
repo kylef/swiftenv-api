@@ -37,6 +37,8 @@ if __name__ == '__main__':
         path = 'versions/{}.yaml'.format(version)
 
         if not os.path.exists(path):
+            print('Add {}'.format(version))
+
             with open(path, 'w') as fp:
                 content = yaml.dump({'binaries': versions[version]}, default_flow_style=False)
                 fp.write(content)

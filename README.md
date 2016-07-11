@@ -31,6 +31,7 @@ installed.*
 $ virtualenv -p python3 venv
 $ source venv/bin/activate
 $ pip install -r requirements.txt
+$ pip install -r dev-requirements.txt
 ```
 
 ### Running the tests
@@ -43,4 +44,10 @@ $ python -m unittest
 
 ```shell
 $ python api.py
+```
+
+### Updating versions
+
+```shell
+$ python extract.py
 ```
