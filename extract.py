@@ -7,26 +7,41 @@ import requests
 from bs4 import BeautifulSoup
 
 
+download_url = 'https://swift.org/download/'
+
+
+def parse_url(url):
+    if url.endswith('.tar.gz') or url.endswith('.pkg'):
+        parse = urlparse(url)
+        name = parse.path.split('/')[-1]
+        (software, rest) = name.split('-', 1)
+        assert(software == 'swift')
+
+        rest = rest.replace('.tar.gz', '').replace('.pkg', '')
+        (rest, platform) = rest.rsplit('-', 1)
+        version = rest.replace('-RELEASE', '').replace('-osx', '')
+
+        if platform == 'symbols':
+            # macOS Debugging Symbol link
+            return (None, None)
+
+        return (version, platform)
+
+    return (None, None)
+
+
 if __name__ == '__main__':
-    download_url = 'https://swift.org/download/'
     request = requests.get(download_url)
     soup = BeautifulSoup(request.text, 'html.parser')
-    releases = soup.find_all('span', class_='release')
+    releases = soup.find_all('a')
 
     versions = {}
 
-    for release in releases:
-        url = urljoin(download_url, release.a['href'])
-        if url.endswith('.tar.gz') or url.endswith('.pkg'):
-            parse = urlparse(url)
-            name = parse.path.split('/')[-1]
-            (software, rest) = name.split('-', 1)
-            assert(software == 'swift')
+    for a in releases:
+        url = urljoin(download_url, a['href'])
+        version, platform = parse_url(url)
 
-            rest = rest.replace('.tar.gz', '').replace('.pkg', '')
-            (rest, platform) = rest.rsplit('-', 1)
-            version = rest.replace('-RELEASE', '')
-
+        if version and platform:
             if version in versions:
                 versions[version][platform] = url
             else:
