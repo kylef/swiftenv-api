@@ -30,6 +30,17 @@ def parse_url(url):
     return (None, None)
 
 
+def save(path, binaries):
+    with open(path, 'w') as fp:
+        content = yaml.dump({'binaries': binaries}, default_flow_style=False)
+        fp.write(content)
+
+
+def load(path):
+    with open(path, 'r') as fp:
+        return yaml.load(fp)['binaries']
+
+
 if __name__ == '__main__':
     request = requests.get(download_url)
     soup = BeautifulSoup(request.text, 'html.parser')
@@ -50,12 +61,14 @@ if __name__ == '__main__':
 
     for version in versions:
         path = 'versions/{}.yaml'.format(version)
+        binaries = versions[version]
 
-        if not os.path.exists(path):
+        if os.path.exists(path):
+            existing_binaries = load(path)
+
+            if binaries != existing_binaries:
+                print('Mismatched Data: {}'.format(version))
+        else:
             print('Add {}'.format(version))
-
-            with open(path, 'w') as fp:
-                content = yaml.dump({'binaries': versions[version]}, default_flow_style=False)
-                fp.write(content)
-
+            save(path, binaries)
 
