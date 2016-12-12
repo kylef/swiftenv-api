@@ -48,8 +48,6 @@ class VersionManager(object):
         raise flask.abort(404)
 
 
-
-
 class Version(object):
     objects = VersionManager()
 
@@ -70,6 +68,12 @@ class Version(object):
     def __str__(self):
         return self.version
 
+    def __eq__(self, other):
+        if isinstance(other, Version):
+            return self.version == other.version and self.binaries == other.binaries
+
+        return False
+
     @property
     def is_snapshot(self):
         return 'SNAPSHOT' in self.version
@@ -79,3 +83,9 @@ class Version(object):
         Returns if the version has a binary release for the given platform.
         """
         return platform in self.binaries
+
+    def save(cls):
+        path = os.path.join('versions', '{}.yaml'.format(self.version))
+
+        with open(path, 'w') as fp:
+            yaml.dump(fp, {'binaries': self.binaries}, default_flow_style=False)

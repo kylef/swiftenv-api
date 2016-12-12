@@ -6,11 +6,20 @@ import yaml
 import requests
 from bs4 import BeautifulSoup
 
+from versions import Version
+
 
 download_url = 'https://swift.org/download/'
 
 
 def parse_url(url):
+    """
+    Parse a URL into a version and platform tuple.
+
+    >>> parse_url('https://swift.org/builds/swift-3.0.1-release/ubuntu1604/swift-3.0.1-RELEASE/swift-3.0.1-RELEASE-ubuntu16.04.tar.gz')
+    ('3.0.1', 'ubuntu16.04')
+    """
+
     if url.endswith('.tar.gz') or url.endswith('.pkg'):
         parse = urlparse(url)
         name = parse.path.split('/')[-1]
@@ -30,18 +39,14 @@ def parse_url(url):
     return (None, None)
 
 
-def save(path, binaries):
-    with open(path, 'w') as fp:
-        content = yaml.dump({'binaries': binaries}, default_flow_style=False)
-        fp.write(content)
+def determine_versions():
+    """
+    Scrape the Swift website to find all available versions.
 
+    >>> determine_versions()
+    [Version(3.0.1), Version(3.0), ...]
+    """
 
-def load(path):
-    with open(path, 'r') as fp:
-        return yaml.load(fp)['binaries']
-
-
-if __name__ == '__main__':
     request = requests.get(download_url)
     soup = BeautifulSoup(request.text, 'html.parser')
     releases = soup.find_all('a')
@@ -54,21 +59,26 @@ if __name__ == '__main__':
 
         if version and platform:
             if version in versions:
-                versions[version][platform] = url
+                versions[version].binaries[platform] = url
             else:
-                versions[version] = {platform: url}
+                versions[version] = Version(version, {platform: url})
+
+    return [version for (name, version) in versions.items()]
 
 
+def save_versions(versions):
     for version in versions:
-        path = 'versions/{}.yaml'.format(version)
-        binaries = versions[version]
+        path = 'versions/{}.yaml'.format(version.version)
 
         if os.path.exists(path):
-            existing_binaries = load(path)
+            existing_version = Version.fromfile(path)
 
-            if binaries != existing_binaries:
+            if version != existing_version:
                 print('Mismatched Data: {}'.format(version))
         else:
             print('Add {}'.format(version))
-            save(path, binaries)
+            version.save()
 
+
+if __name__ == '__main__':
+    save_versions(determine_versions())
