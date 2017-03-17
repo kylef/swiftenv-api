@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
+import sys
 import os
+import subprocess
 from urllib.parse import urljoin, urlparse
 import yaml
 import requests
@@ -66,19 +68,46 @@ def determine_versions():
     return [version for (name, version) in versions.items()]
 
 
-def save_versions(versions):
+def save_version(version, commit=False):
+    path = 'versions/{}.yaml'.format(version.version)
+
+    if os.path.exists(path):
+        existing_version = Version.fromfile(path)
+
+        if version != existing_version:
+            print('Mismatched Data: {}'.format(version))
+    else:
+        print('Add {}'.format(version))
+        version.save()
+        subprocess.check_call(['git', 'add', version.path])
+        subprocess.check_call(['git', 'commit', '-m', 'chore: Add {}'.format(version.version)])
+        return True
+
+    return False
+
+
+def save_versions(versions, commit=False):
+    updated = False
+
     for version in versions:
-        path = 'versions/{}.yaml'.format(version.version)
+        if save_version(version, commit=commit):
+            updated = True
 
-        if os.path.exists(path):
-            existing_version = Version.fromfile(path)
-
-            if version != existing_version:
-                print('Mismatched Data: {}'.format(version))
-        else:
-            print('Add {}'.format(version))
-            version.save()
+    return updated
 
 
 if __name__ == '__main__':
-    save_versions(determine_versions())
+    if '--help' in sys.argv:
+        print('Usage: {} [--commit] [--push] [--help]'.format(sys.argv[0]))
+        print('\nOptions:')
+        print('    --commit - Create commits for each version change')
+        print('    --push - Push master to origin after extracting versions (Implies --commit)')
+        exit(0)
+
+    push = '--push' in sys.argv
+    commit = push or '--commit' in sys.argv
+
+    saved = save_versions(determine_versions(), commit=commit)
+
+    if saved and push:
+        subprocess.check_call(['git', 'push', 'origin', 'master'])

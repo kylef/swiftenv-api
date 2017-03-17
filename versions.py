@@ -84,8 +84,10 @@ class Version(object):
         """
         return platform in self.binaries
 
-    def save(self):
-        path = os.path.join('versions', '{}.yaml'.format(self.version))
+    @property
+    def path(self):
+        return os.path.join('versions', '{}.yaml'.format(self.version))
 
-        with open(path, 'w') as fp:
+    def save(self):
+        with open(self.path, 'w') as fp:
             yaml.dump({'binaries': self.binaries}, fp, default_flow_style=False)
