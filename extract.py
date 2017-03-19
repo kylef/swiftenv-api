@@ -79,8 +79,11 @@ def save_version(version, commit=False):
     else:
         print('Add {}'.format(version))
         version.save()
-        subprocess.check_call(['git', 'add', version.path])
-        subprocess.check_call(['git', 'commit', '-m', 'chore: Add {}'.format(version.version)])
+
+        if commit:
+            subprocess.check_call(['git', 'add', version.path])
+            subprocess.check_call(['git', 'commit', '-m', 'chore: Add {}'.format(version.version)])
+
         return True
 
     return False
