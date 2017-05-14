@@ -1,0 +1,5 @@
+binaries:
+  osx: https://swift.org/builds/swift-3.0-preview-6/xcode/swift-3.0-PREVIEW-6/swift-3.0-PREVIEW-6-osx.pkg
+  ubuntu14.04: https://swift.org/builds/swift-3.0-preview-6/ubuntu1404/swift-3.0-PREVIEW-6/swift-3.0-PREVIEW-6-ubuntu14.04.tar.gz
+  ubuntu15.10: https://swift.org/builds/swift-3.0-preview-6/ubuntu1510/swift-3.0-PREVIEW-6/swift-3.0-PREVIEW-6-ubuntu15.10.tar.gz
+version: 3.0-PREVIEW-6

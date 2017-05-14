@@ -1,5 +1,0 @@
-binaries:
-  osx: https://swift.org/builds/development/xcode/swift-DEVELOPMENT-SNAPSHOT-2017-04-01-a/swift-DEVELOPMENT-SNAPSHOT-2017-04-01-a-osx.pkg
-  ubuntu14.04: https://swift.org/builds/development/ubuntu1404/swift-DEVELOPMENT-SNAPSHOT-2017-04-01-a/swift-DEVELOPMENT-SNAPSHOT-2017-04-01-a-ubuntu14.04.tar.gz
-  ubuntu16.04: https://swift.org/builds/development/ubuntu1604/swift-DEVELOPMENT-SNAPSHOT-2017-04-01-a/swift-DEVELOPMENT-SNAPSHOT-2017-04-01-a-ubuntu16.04.tar.gz
-  ubuntu16.10: https://swift.org/builds/development/ubuntu1610/swift-DEVELOPMENT-SNAPSHOT-2017-04-01-a/swift-DEVELOPMENT-SNAPSHOT-2017-04-01-a-ubuntu16.10.tar.gz

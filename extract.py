@@ -4,7 +4,6 @@ import sys
 import os
 import subprocess
 from urllib.parse import urljoin, urlparse
-import yaml
 import requests
 from bs4 import BeautifulSoup
 
@@ -69,10 +68,8 @@ def determine_versions():
 
 
 def save_version(version, commit=False):
-    path = 'versions/{}.yaml'.format(version.version)
-
-    if os.path.exists(path):
-        existing_version = Version.fromfile(path)
+    if os.path.exists(version.path):
+        existing_version = Version.fromfile(version.path)
 
         if version != existing_version:
             print('Mismatched Data: {}'.format(version))
