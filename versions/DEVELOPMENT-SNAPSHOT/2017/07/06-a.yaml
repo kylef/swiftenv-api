@@ -1,0 +1,6 @@
+binaries:
+  osx: https://swift.org/builds/development/xcode/swift-DEVELOPMENT-SNAPSHOT-2017-07-06-a/swift-DEVELOPMENT-SNAPSHOT-2017-07-06-a-osx.pkg
+  ubuntu14.04: https://swift.org/builds/development/ubuntu1404/swift-DEVELOPMENT-SNAPSHOT-2017-07-06-a/swift-DEVELOPMENT-SNAPSHOT-2017-07-06-a-ubuntu14.04.tar.gz
+  ubuntu16.04: https://swift.org/builds/development/ubuntu1604/swift-DEVELOPMENT-SNAPSHOT-2017-07-06-a/swift-DEVELOPMENT-SNAPSHOT-2017-07-06-a-ubuntu16.04.tar.gz
+  ubuntu16.10: https://swift.org/builds/development/ubuntu1610/swift-DEVELOPMENT-SNAPSHOT-2017-07-06-a/swift-DEVELOPMENT-SNAPSHOT-2017-07-06-a-ubuntu16.10.tar.gz
+version: DEVELOPMENT-SNAPSHOT-2017-07-06-a
