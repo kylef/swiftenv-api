@@ -36,7 +36,7 @@ class VersionManager(object):
             versions = [v for v in versions if not v.is_snapshot]
 
         if platform:
-            versions = [v for v in versions if not v.supports_platform(platform)]
+            versions = [v for v in versions if v.supports_platform(platform)]
 
         return VersionManager(versions)
 
