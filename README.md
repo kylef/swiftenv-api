@@ -22,13 +22,10 @@ Returns the available versions of Swift.
 
 You can configure a development environment with the following:
 
-**NOTE**: *These steps assume you have Python 3 along with
-[pip](https://pip.pypa.io/en/latest/installing.html) and
-[virtualenv](https://virtualenv.pypa.io/en/latest/installation.html)
-installed.*
+**NOTE**: *These steps assume you have Python 3.6 installed.*
 
 ```bash
-$ virtualenv -p python3 venv
+$ python3 -m venv venv
 $ source venv/bin/activate
 $ pip install -r requirements.txt
 $ pip install -r dev-requirements.txt
