@@ -108,7 +108,7 @@ class Version(object):
         if rest:
             if rest.startswith('DEVELOPMENT-SNAPSHOT-'):
                 rest = rest[len('DEVELOPMENT-SNAPSHOT-'):]
-                return os.path.join('versions', major, 'DEVELOPMENT-SNAPSHOT', '{}.yaml'.format(rest))
+                return os.path.join('versions', major, '{}-DEVELOPMENT-SNAPSHOT'.format(version), '{}.yaml'.format(rest))
 
         return os.path.join('versions', major, '{}.yaml'.format(self.version))
 
