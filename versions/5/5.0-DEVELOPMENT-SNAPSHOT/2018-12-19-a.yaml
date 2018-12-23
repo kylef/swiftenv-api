@@ -1,0 +1,6 @@
+binaries:
+  osx: https://swift.org/builds/swift-5.0-branch/xcode/swift-5.0-DEVELOPMENT-SNAPSHOT-2018-12-19-a/swift-5.0-DEVELOPMENT-SNAPSHOT-2018-12-19-a-osx.pkg
+  ubuntu14.04: https://swift.org/builds/swift-5.0-branch/ubuntu1404/swift-5.0-DEVELOPMENT-SNAPSHOT-2018-12-19-a/swift-5.0-DEVELOPMENT-SNAPSHOT-2018-12-19-a-ubuntu14.04.tar.gz
+  ubuntu16.04: https://swift.org/builds/swift-5.0-branch/ubuntu1604/swift-5.0-DEVELOPMENT-SNAPSHOT-2018-12-19-a/swift-5.0-DEVELOPMENT-SNAPSHOT-2018-12-19-a-ubuntu16.04.tar.gz
+  ubuntu18.04: https://swift.org/builds/swift-5.0-branch/ubuntu1804/swift-5.0-DEVELOPMENT-SNAPSHOT-2018-12-19-a/swift-5.0-DEVELOPMENT-SNAPSHOT-2018-12-19-a-ubuntu18.04.tar.gz
+version: 5.0-DEVELOPMENT-SNAPSHOT-2018-12-19-a
