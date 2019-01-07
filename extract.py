@@ -45,7 +45,7 @@ def determine_versions():
     Scrape the Swift website to find all available versions.
 
     >>> determine_versions()
-    [Version(3.0.1), Version(3.0), ...]
+    [Version(3.0), Version(3.0.1), ...]
     """
 
     request = requests.get(download_url)
@@ -64,7 +64,7 @@ def determine_versions():
             else:
                 versions[version] = Version(version, {platform: url})
 
-    return [version for (name, version) in versions.items()]
+    return sorted([version for (name, version) in versions.items()], key=lambda v: v.version)
 
 
 def save_version(version, commit=False):
