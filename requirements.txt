@@ -1,4 +1,4 @@
-Flask==1.0.3
+Flask==1.1.0
 Flask-HAL==1.0.4
 gunicorn==19.9.0
 itsdangerous==0.24
