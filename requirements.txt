@@ -1,6 +1,6 @@
 Flask==1.0.3
 Flask-HAL==1.0.4
-gunicorn==20.0.3
+gunicorn==20.0.4
 itsdangerous==0.24
 Jinja2==2.10.3
 MarkupSafe==0.23
