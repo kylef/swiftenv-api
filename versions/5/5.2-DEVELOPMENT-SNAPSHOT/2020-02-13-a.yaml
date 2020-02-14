@@ -1,0 +1,5 @@
+binaries:
+  osx: https://swift.org/builds/swift-5.2-branch/xcode/swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-13-a/swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-13-a-osx.pkg
+  ubuntu16.04: https://swift.org/builds/swift-5.2-branch/ubuntu1604/swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-13-a/swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-13-a-ubuntu16.04.tar.gz
+  ubuntu18.04: https://swift.org/builds/swift-5.2-branch/ubuntu1804/swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-13-a/swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-13-a-ubuntu18.04.tar.gz
+version: 5.2-DEVELOPMENT-SNAPSHOT-2020-02-13-a
