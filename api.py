@@ -35,14 +35,14 @@ def filter_versions():
 def root():
     return Document(links=Collection(
         Link('versions', '/versions'),
-    ))
+    )).to_dict()
 
 
 @app.route('/versions/<name>')
 def version_detail(name):
     version = Version.objects.get(version=name)
     links = [Link(rel, url) for (rel, url) in version.binaries.items()]
-    return Document(data={'version': version.version}, links=Collection(*links))
+    return Document(data={'version': version.version}, links=Collection(*links)).to_dict()
 
 
 @app.route('/versions/<name>/binaries/<platform>')
@@ -70,7 +70,7 @@ def list_text_versions():
     def to_embedded(v):
         return Embedded(links=Collection(Link('self', '/versions/{}'.format(v.version))))
 
-    return Document(embedded=dict([(v.version, to_embedded(v)) for v in versions]))
+    return Document(embedded=dict([(v.version, to_embedded(v)) for v in versions])).to_dict()
 
 
 if __name__ == '__main__':
