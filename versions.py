@@ -59,7 +59,7 @@ class Version(object):
         version = os.path.splitext(os.path.basename(path))[0]
 
         with open(path) as fp:
-            content = yaml.load(fp.read())
+            content = yaml.safe_load(fp.read())
             binaries = content['binaries']
 
         if 'version' in content:
