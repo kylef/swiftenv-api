@@ -6,4 +6,4 @@ Jinja2==2.11.2
 MarkupSafe==0.23
 PyYAML==5.3.1
 Werkzeug==0.15.3
-wheel==0.34.2
+wheel==0.35.1
