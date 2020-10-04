@@ -55,7 +55,11 @@ def determine_versions():
     versions = {}
 
     for a in releases:
-        url = urljoin(download_url, a['href'])
+        href = a.get('href', None)
+        if not href:
+            continue
+
+        url = urljoin(download_url, href)
         version, platform = parse_url(url)
 
         if version and platform:
