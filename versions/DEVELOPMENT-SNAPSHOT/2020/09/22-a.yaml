@@ -6,4 +6,5 @@ binaries:
   ubuntu16.04: https://swift.org/builds/development/ubuntu1604/swift-DEVELOPMENT-SNAPSHOT-2020-09-22-a/swift-DEVELOPMENT-SNAPSHOT-2020-09-22-a-ubuntu16.04.tar.gz
   ubuntu18.04: https://swift.org/builds/development/ubuntu1804/swift-DEVELOPMENT-SNAPSHOT-2020-09-22-a/swift-DEVELOPMENT-SNAPSHOT-2020-09-22-a-ubuntu18.04.tar.gz
   ubuntu20.04: https://swift.org/builds/development/ubuntu2004/swift-DEVELOPMENT-SNAPSHOT-2020-09-22-a/swift-DEVELOPMENT-SNAPSHOT-2020-09-22-a-ubuntu20.04.tar.gz
+  windows10: https://swift.org/builds/development/windows10/swift-DEVELOPMENT-SNAPSHOT-2020-09-22-a/swift-DEVELOPMENT-SNAPSHOT-2020-09-22-a-windows10.exe
 version: DEVELOPMENT-SNAPSHOT-2020-09-22-a
