@@ -1,0 +1,9 @@
+binaries:
+  amazonlinux2: https://swift.org/builds/development/amazonlinux2/swift-DEVELOPMENT-SNAPSHOT-2021-01-12-a/swift-DEVELOPMENT-SNAPSHOT-2021-01-12-a-amazonlinux2.tar.gz
+  centos7: https://swift.org/builds/development/centos7/swift-DEVELOPMENT-SNAPSHOT-2021-01-12-a/swift-DEVELOPMENT-SNAPSHOT-2021-01-12-a-centos7.tar.gz
+  centos8: https://swift.org/builds/development/centos8/swift-DEVELOPMENT-SNAPSHOT-2021-01-12-a/swift-DEVELOPMENT-SNAPSHOT-2021-01-12-a-centos8.tar.gz
+  osx: https://swift.org/builds/development/xcode/swift-DEVELOPMENT-SNAPSHOT-2021-01-12-a/swift-DEVELOPMENT-SNAPSHOT-2021-01-12-a-osx.pkg
+  ubuntu16.04: https://swift.org/builds/development/ubuntu1604/swift-DEVELOPMENT-SNAPSHOT-2021-01-12-a/swift-DEVELOPMENT-SNAPSHOT-2021-01-12-a-ubuntu16.04.tar.gz
+  ubuntu18.04: https://swift.org/builds/development/ubuntu1804/swift-DEVELOPMENT-SNAPSHOT-2021-01-12-a/swift-DEVELOPMENT-SNAPSHOT-2021-01-12-a-ubuntu18.04.tar.gz
+  ubuntu20.04: https://swift.org/builds/development/ubuntu2004/swift-DEVELOPMENT-SNAPSHOT-2021-01-12-a/swift-DEVELOPMENT-SNAPSHOT-2021-01-12-a-ubuntu20.04.tar.gz
+version: DEVELOPMENT-SNAPSHOT-2021-01-12-a
