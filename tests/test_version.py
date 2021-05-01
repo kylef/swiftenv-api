@@ -8,6 +8,14 @@ class VersionTests(unittest.TestCase):
         version = Version('2.2.0', {})
         self.assertFalse(version.is_snapshot)
 
+    def test_version_snapshot_is_pre_release(self):
+        version = Version('2.2.1-SNAPSHOT-2016-04-23-a', {})
+        self.assertTrue(version.is_pre_release)
+
+    def test_version_snapshot_is_pre_release(self):
+        version = Version('2.2.1-SNAPSHOT-2016-04-23-a', {})
+        self.assertTrue(version.is_pre_release)
+
     def test_version_is_snapshot(self):
         version = Version('2.2.1-SNAPSHOT-2016-04-23-a', {})
         self.assertTrue(version.is_snapshot)

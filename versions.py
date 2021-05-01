@@ -23,11 +23,17 @@ class VersionManager(object):
     def all(self):
         return self
 
-    def filter(self, version=None, snapshots=None, platform=None):
+    def filter(self, version=None, pre_release=None, snapshots=None, platform=None):
         versions = self.versions
 
         if version:
             versions = [v for v in versions if v.version == version]
+
+        if pre_release is True:
+            versions = [v for v in versions if v.is_pre_release]
+
+        if pre_release is False:
+            versions = [v for v in versions if not v.is_pre_release]
 
         if snapshots is True:
             versions = [v for v in versions if v.is_snapshot]
@@ -79,6 +85,10 @@ class Version(object):
             return self.version == other.version and self.binaries == other.binaries
 
         return False
+
+    @property
+    def is_pre_release(self):
+        return '-' in self.version
 
     @property
     def is_snapshot(self):

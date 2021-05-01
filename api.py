@@ -28,7 +28,7 @@ def filter_versions():
     else:
         snapshots = False
 
-    return Version.objects.filter(snapshots=snapshots, platform=platform)
+    return Version.objects.filter(pre_release=snapshots, snapshots=snapshots, platform=platform)
 
 
 @app.route('/')
