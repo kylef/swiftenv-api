@@ -22,7 +22,7 @@ Returns the available versions of Swift.
 
 You can configure a development environment with the following:
 
-**NOTE**: *These steps assume you have Python 3.6 installed.*
+**NOTE**: *These steps assume you have Python 3.6 (or newer) installed.*
 
 ```bash
 $ python3 -m venv venv
