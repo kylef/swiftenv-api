@@ -1,0 +1,8 @@
+binaries:
+  centos7: https://swift.org/builds/swift-5.5-branch/centos7/swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-04-a/swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-04-a-centos7.tar.gz
+  centos8: https://swift.org/builds/swift-5.5-branch/centos8/swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-04-a/swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-04-a-centos8.tar.gz
+  osx: https://swift.org/builds/swift-5.5-branch/xcode/swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-04-a/swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-04-a-osx.pkg
+  ubuntu16.04: https://swift.org/builds/swift-5.5-branch/ubuntu1604/swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-04-a/swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-04-a-ubuntu16.04.tar.gz
+  ubuntu18.04: https://swift.org/builds/swift-5.5-branch/ubuntu1804/swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-04-a/swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-04-a-ubuntu18.04.tar.gz
+  ubuntu20.04: https://swift.org/builds/swift-5.5-branch/ubuntu2004/swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-04-a/swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-04-a-ubuntu20.04.tar.gz
+version: 5.5-DEVELOPMENT-SNAPSHOT-2021-08-04-a
