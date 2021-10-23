@@ -1,3 +1,0 @@
-binaries:
-  aarch64: https://swift.org/builds/development/centos8-aarch64/swift-DEVELOPMENT-SNAPSHOT-2021-09-05-a/swift-DEVELOPMENT-SNAPSHOT-2021-09-05-a-centos8-aarch64.tar.gz
-version: DEVELOPMENT-SNAPSHOT-2021-09-05-a-centos8

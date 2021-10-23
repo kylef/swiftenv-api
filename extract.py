@@ -125,12 +125,26 @@ if __name__ == '__main__':
     commit = push or '--commit' in sys.argv
 
     if resave:
+        versions = [v for v in Version.objects.versions if 'aarch64' not in v.binaries]
+
+        # merge aarch64 into named versions
         for version in Version.objects.versions:
-            if 'aarch64' in version.binaries:
-                # skip aarch64 platforms, these have been parsed differently
+            if 'aarch64' not in version.binaries:
                 continue
 
+            name, _, platform = version.version.rpartition('-')
+            new_version = Version.objects.get(version=name)
+
+            plat = new_version.binaries.get(platform, {})
+            plat['aarch64'] = version.binaries['aarch64']['x86_64']
+
+            # delete the file as it is merged now
+            os.unlink(version.path)
+
+
+        for version in versions:
             version.save()
+
         exit(0)
 
     saved = save_versions(determine_versions(), commit=commit)
