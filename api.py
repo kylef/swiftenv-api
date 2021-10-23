@@ -41,7 +41,12 @@ def root():
 @app.route('/versions/<name>')
 def version_detail(name):
     version = Version.objects.get(version=name)
-    links = [Link(rel, url) for (rel, url) in version.binaries.items()]
+    binaries = {}
+    for (platform, links) in version.binaries.items():
+        if 'x86_64' in links:
+            binaries[platform] = links['x86_64']
+
+    links = [Link(rel, url) for (rel, url) in binaries.items()]
     return Document(data={'version': version.version}, links=Collection(*links)).to_dict()
 
 
@@ -49,10 +54,10 @@ def version_detail(name):
 def binary_detail(name, platform):
     version = Version.objects.get(version=name)
     binary = version.binaries.get(platform)
-    if not binary:
+    if not binary or 'x86_64' not in binary:
         raise flask.abort(404)
 
-    response = app.make_response(binary)
+    response = app.make_response(binary['x86_64'])
     response.headers['Content-Type'] = 'text/plain'
     return response
 

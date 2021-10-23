@@ -18,7 +18,10 @@ def parse_url(url):
     Parse a URL into a version and platform tuple.
 
     >>> parse_url('https://swift.org/builds/swift-3.0.1-release/ubuntu1604/swift-3.0.1-RELEASE/swift-3.0.1-RELEASE-ubuntu16.04.tar.gz')
-    ('3.0.1', 'ubuntu16.04')
+    ('3.0.1', 'ubuntu16.04', 'x86_64')
+
+    >>> parse_url('https://download.swift.org/development/ubuntu2004-aarch64/swift-DEVELOPMENT-SNAPSHOT-2021-10-21-a/swift-DEVELOPMENT-SNAPSHOT-2021-10-21-a-ubuntu20.04-aarch64.tar.gz')
+    ('DEVELOPMENT-SNAPSHOT-2021-10-21-a', 'ubuntu20.04', 'aarch64')
     """
 
     if url.endswith('.tar.gz') or url.endswith('.pkg'):
@@ -33,11 +36,17 @@ def parse_url(url):
 
         if platform == 'symbols':
             # macOS Debugging Symbol link
-            return (None, None)
+            return (None, None, None)
 
-        return (version, platform)
+        if platform == 'aarch64':
+            architecture = platform
+            (version, _, platform) = version.rpartition('-')
+        else:
+            architecture = 'x86_64'
 
-    return (None, None)
+        return (version, platform, architecture)
+
+    return (None, None, None)
 
 
 def determine_versions():
@@ -60,13 +69,15 @@ def determine_versions():
             continue
 
         url = urljoin(download_url, href)
-        version, platform = parse_url(url)
+        version, platform, architecture = parse_url(url)
 
         if version and platform:
             if version in versions:
-                versions[version].binaries[platform] = url
+                plat = versions[version].binaries.get(platform, {})
+                plat[architecture] = url
+                versions[version].binaries[platform] = plat
             else:
-                versions[version] = Version(version, {platform: url})
+                versions[version] = Version(version, {platform: {architecture: url}})
 
     return sorted([version for (name, version) in versions.items()], key=lambda v: v.version)
 

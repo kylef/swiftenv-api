@@ -66,7 +66,15 @@ class Version(object):
 
         with open(path) as fp:
             content = yaml.safe_load(fp.read())
-            binaries = content['binaries']
+            binaries = {}
+            for (key, value) in content['binaries'].items():
+                # convert between old and new schema
+                if isinstance(value, str):
+                    binaries[key] = {
+                        'x86_64': value,
+                    }
+                else:
+                    binaries[key] = value
 
         if 'version' in content:
             version = content['version']
