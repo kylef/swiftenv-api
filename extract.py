@@ -117,10 +117,21 @@ if __name__ == '__main__':
         print('\nOptions:')
         print('    --commit - Create commits for each version change')
         print('    --push - Push master to origin after extracting versions (Implies --commit)')
+        print('    --resave - Load and save every version again (used for schema migrations)')
         exit(0)
 
+    resave = '--resave' in sys.argv
     push = '--push' in sys.argv
     commit = push or '--commit' in sys.argv
+
+    if resave:
+        for version in Version.objects.versions:
+            if 'aarch64' in version.binaries:
+                # skip aarch64 platforms, these have been parsed differently
+                continue
+
+            version.save()
+        exit(0)
 
     saved = save_versions(determine_versions(), commit=commit)
 
