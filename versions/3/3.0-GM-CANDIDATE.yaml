@@ -1,5 +1,8 @@
 binaries:
-  osx: https://swift.org/builds/swift-3.0-GM-CANDIDATE/xcode/swift-3.0-GM-CANDIDATE/swift-3.0-GM-CANDIDATE-osx.pkg
-  ubuntu14.04: https://swift.org/builds/swift-3.0-GM-CANDIDATE/ubuntu1404/swift-3.0-GM-CANDIDATE/swift-3.0-GM-CANDIDATE-ubuntu14.04.tar.gz
-  ubuntu15.10: https://swift.org/builds/swift-3.0-GM-CANDIDATE/ubuntu1510/swift-3.0-GM-CANDIDATE/swift-3.0-GM-CANDIDATE-ubuntu15.10.tar.gz
+  osx:
+    x86_64: https://swift.org/builds/swift-3.0-GM-CANDIDATE/xcode/swift-3.0-GM-CANDIDATE/swift-3.0-GM-CANDIDATE-osx.pkg
+  ubuntu14.04:
+    x86_64: https://swift.org/builds/swift-3.0-GM-CANDIDATE/ubuntu1404/swift-3.0-GM-CANDIDATE/swift-3.0-GM-CANDIDATE-ubuntu14.04.tar.gz
+  ubuntu15.10:
+    x86_64: https://swift.org/builds/swift-3.0-GM-CANDIDATE/ubuntu1510/swift-3.0-GM-CANDIDATE/swift-3.0-GM-CANDIDATE-ubuntu15.10.tar.gz
 version: 3.0-GM-CANDIDATE

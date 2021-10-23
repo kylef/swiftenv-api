@@ -1,8 +1,14 @@
 binaries:
-  centos7: https://swift.org/builds/swift-5.3-branch/centos7/swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a/swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a-centos7.tar.gz
-  centos8: https://swift.org/builds/swift-5.3-branch/centos8/swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a/swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a-centos8.tar.gz
-  osx: https://swift.org/builds/swift-5.3-branch/xcode/swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a/swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a-osx.pkg
-  ubuntu16.04: https://swift.org/builds/swift-5.3-branch/ubuntu1604/swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a/swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a-ubuntu16.04.tar.gz
-  ubuntu18.04: https://swift.org/builds/swift-5.3-branch/ubuntu1804/swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a/swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a-ubuntu18.04.tar.gz
-  ubuntu20.04: https://swift.org/builds/swift-5.3-branch/ubuntu2004/swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a/swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a-ubuntu20.04.tar.gz
+  centos7:
+    x86_64: https://swift.org/builds/swift-5.3-branch/centos7/swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a/swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a-centos7.tar.gz
+  centos8:
+    x86_64: https://swift.org/builds/swift-5.3-branch/centos8/swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a/swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a-centos8.tar.gz
+  osx:
+    x86_64: https://swift.org/builds/swift-5.3-branch/xcode/swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a/swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a-osx.pkg
+  ubuntu16.04:
+    x86_64: https://swift.org/builds/swift-5.3-branch/ubuntu1604/swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a/swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a-ubuntu16.04.tar.gz
+  ubuntu18.04:
+    x86_64: https://swift.org/builds/swift-5.3-branch/ubuntu1804/swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a/swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a-ubuntu18.04.tar.gz
+  ubuntu20.04:
+    x86_64: https://swift.org/builds/swift-5.3-branch/ubuntu2004/swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a/swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a-ubuntu20.04.tar.gz
 version: 5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a

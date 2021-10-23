@@ -1,5 +1,8 @@
 binaries:
-  osx: https://swift.org/builds/swift-3.0-preview-5/xcode/swift-3.0-PREVIEW-5/swift-3.0-PREVIEW-5-osx.pkg
-  ubuntu14.04: https://swift.org/builds/swift-3.0-preview-5/ubuntu1404/swift-3.0-PREVIEW-5/swift-3.0-PREVIEW-5-ubuntu14.04.tar.gz
-  ubuntu15.10: https://swift.org/builds/swift-3.0-preview-5/ubuntu1510/swift-3.0-PREVIEW-5/swift-3.0-PREVIEW-5-ubuntu15.10.tar.gz
+  osx:
+    x86_64: https://swift.org/builds/swift-3.0-preview-5/xcode/swift-3.0-PREVIEW-5/swift-3.0-PREVIEW-5-osx.pkg
+  ubuntu14.04:
+    x86_64: https://swift.org/builds/swift-3.0-preview-5/ubuntu1404/swift-3.0-PREVIEW-5/swift-3.0-PREVIEW-5-ubuntu14.04.tar.gz
+  ubuntu15.10:
+    x86_64: https://swift.org/builds/swift-3.0-preview-5/ubuntu1510/swift-3.0-PREVIEW-5/swift-3.0-PREVIEW-5-ubuntu15.10.tar.gz
 version: 3.0-PREVIEW-5
