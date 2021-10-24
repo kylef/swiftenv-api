@@ -24,13 +24,13 @@ def parse_url(url):
     ('DEVELOPMENT-SNAPSHOT-2021-10-21-a', 'ubuntu20.04', 'aarch64')
     """
 
-    if url.endswith('.tar.gz') or url.endswith('.pkg'):
+    if url.endswith('.tar.gz') or url.endswith('.pkg') or url.endswith('.exe'):
         parse = urlparse(url)
         name = parse.path.split('/')[-1]
         (software, rest) = name.split('-', 1)
         assert(software == 'swift')
 
-        rest = rest.replace('.tar.gz', '').replace('.pkg', '')
+        rest = rest.replace('.tar.gz', '').replace('.pkg', '').replace('.exe', '')
         (rest, platform) = rest.rsplit('-', 1)
         version = rest.replace('-RELEASE', '').replace('-osx', '')
 
