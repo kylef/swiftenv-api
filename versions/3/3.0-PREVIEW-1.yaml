@@ -1,6 +1,6 @@
 binaries:
   ubuntu14.04:
-    x86_64: https://swift.org/builds/swift-3.0-preview-1/ubuntu1404/swift-3.0-PREVIEW-1/swift-3.0-PREVIEW-1-ubuntu14.04.tar.gz
+    x86_64: https://download.swift.org/swift-3.0-preview-1/ubuntu1404/swift-3.0-PREVIEW-1/swift-3.0-PREVIEW-1-ubuntu14.04.tar.gz
   ubuntu15.10:
-    x86_64: https://swift.org/builds/swift-3.0-preview-1/ubuntu1510/swift-3.0-PREVIEW-1/swift-3.0-PREVIEW-1-ubuntu15.10.tar.gz
+    x86_64: https://download.swift.org/swift-3.0-preview-1/ubuntu1510/swift-3.0-PREVIEW-1/swift-3.0-PREVIEW-1-ubuntu15.10.tar.gz
 version: 3.0-PREVIEW-1

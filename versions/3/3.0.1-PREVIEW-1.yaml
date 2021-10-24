@@ -1,10 +1,10 @@
 binaries:
   osx:
-    x86_64: https://swift.org/builds/swift-3.0.1-preview-1/xcode/swift-3.0.1-PREVIEW-1/swift-3.0.1-PREVIEW-1-osx.pkg
+    x86_64: https://download.swift.org/swift-3.0.1-preview-1/xcode/swift-3.0.1-PREVIEW-1/swift-3.0.1-PREVIEW-1-osx.pkg
   ubuntu14.04:
-    x86_64: https://swift.org/builds/swift-3.0.1-preview-1/ubuntu1404/swift-3.0.1-PREVIEW-1/swift-3.0.1-PREVIEW-1-ubuntu14.04.tar.gz
+    x86_64: https://download.swift.org/swift-3.0.1-preview-1/ubuntu1404/swift-3.0.1-PREVIEW-1/swift-3.0.1-PREVIEW-1-ubuntu14.04.tar.gz
   ubuntu15.10:
-    x86_64: https://swift.org/builds/swift-3.0.1-preview-1/ubuntu1510/swift-3.0.1-PREVIEW-1/swift-3.0.1-PREVIEW-1-ubuntu15.10.tar.gz
+    x86_64: https://download.swift.org/swift-3.0.1-preview-1/ubuntu1510/swift-3.0.1-PREVIEW-1/swift-3.0.1-PREVIEW-1-ubuntu15.10.tar.gz
   ubuntu16.04:
-    x86_64: https://swift.org/builds/swift-3.0.1-preview-1/ubuntu1604/swift-3.0.1-PREVIEW-1/swift-3.0.1-PREVIEW-1-ubuntu16.04.tar.gz
+    x86_64: https://download.swift.org/swift-3.0.1-preview-1/ubuntu1604/swift-3.0.1-PREVIEW-1/swift-3.0.1-PREVIEW-1-ubuntu16.04.tar.gz
 version: 3.0.1-PREVIEW-1

@@ -1,16 +1,16 @@
 binaries:
   amazonlinux2:
-    x86_64: https://swift.org/builds/development/amazonlinux2/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a-amazonlinux2.tar.gz
+    x86_64: https://download.swift.org/development/amazonlinux2/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a-amazonlinux2.tar.gz
   centos7:
-    x86_64: https://swift.org/builds/development/centos7/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a-centos7.tar.gz
+    x86_64: https://download.swift.org/development/centos7/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a-centos7.tar.gz
   centos8:
-    x86_64: https://swift.org/builds/development/centos8/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a-centos8.tar.gz
+    x86_64: https://download.swift.org/development/centos8/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a-centos8.tar.gz
   osx:
-    x86_64: https://swift.org/builds/development/xcode/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a-osx.pkg
+    x86_64: https://download.swift.org/development/xcode/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a-osx.pkg
   ubuntu16.04:
-    x86_64: https://swift.org/builds/development/ubuntu1604/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a-ubuntu16.04.tar.gz
+    x86_64: https://download.swift.org/development/ubuntu1604/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a-ubuntu16.04.tar.gz
   ubuntu18.04:
-    x86_64: https://swift.org/builds/development/ubuntu1804/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a-ubuntu18.04.tar.gz
+    x86_64: https://download.swift.org/development/ubuntu1804/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a-ubuntu18.04.tar.gz
   ubuntu20.04:
-    x86_64: https://swift.org/builds/development/ubuntu2004/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a-ubuntu20.04.tar.gz
+    x86_64: https://download.swift.org/development/ubuntu2004/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a/swift-DEVELOPMENT-SNAPSHOT-2021-08-27-a-ubuntu20.04.tar.gz
 version: DEVELOPMENT-SNAPSHOT-2021-08-27-a

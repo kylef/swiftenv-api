@@ -1,8 +1,8 @@
 binaries:
   osx:
-    x86_64: https://swift.org/builds/swift-2.2-branch/xcode/swift-2.2.1-SNAPSHOT-2016-04-12-a/swift-2.2.1-SNAPSHOT-2016-04-12-a-osx.pkg
+    x86_64: https://download.swift.org/swift-2.2-branch/xcode/swift-2.2.1-SNAPSHOT-2016-04-12-a/swift-2.2.1-SNAPSHOT-2016-04-12-a-osx.pkg
   ubuntu14.04:
-    x86_64: https://swift.org/builds/swift-2.2-branch/ubuntu1404/swift-2.2.1-SNAPSHOT-2016-04-12-a/swift-2.2.1-SNAPSHOT-2016-04-12-a-ubuntu14.04.tar.gz
+    x86_64: https://download.swift.org/swift-2.2-branch/ubuntu1404/swift-2.2.1-SNAPSHOT-2016-04-12-a/swift-2.2.1-SNAPSHOT-2016-04-12-a-ubuntu14.04.tar.gz
   ubuntu15.10:
-    x86_64: https://swift.org/builds/swift-2.2-branch/ubuntu1510/swift-2.2.1-SNAPSHOT-2016-04-12-a/swift-2.2.1-SNAPSHOT-2016-04-12-a-ubuntu15.10.tar.gz
+    x86_64: https://download.swift.org/swift-2.2-branch/ubuntu1510/swift-2.2.1-SNAPSHOT-2016-04-12-a/swift-2.2.1-SNAPSHOT-2016-04-12-a-ubuntu15.10.tar.gz
 version: 2.2.1-SNAPSHOT-2016-04-12-a

@@ -141,8 +141,15 @@ if __name__ == '__main__':
             # delete the file as it is merged now
             os.unlink(version.path)
 
-
         for version in versions:
+            # update URLs to the new scheme. See https://github.com/kylef/swiftenv/pull/187
+            for (platform, architectures) in version.binaries.items():
+                for (architecture, url) in architectures.items():
+                    old = 'https://swift.org/builds/'
+                    new = 'https://download.swift.org/'
+                    if url.startswith(old):
+                        architectures[architecture] = url.replace(old, new)
+
             version.save()
 
         exit(0)

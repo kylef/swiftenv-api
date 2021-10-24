@@ -1,4 +1,4 @@
 binaries:
   osx:
-    x86_64: https://swift.org/builds/development/xcode/swift-DEVELOPMENT-SNAPSHOT-2018-09-09-a/swift-DEVELOPMENT-SNAPSHOT-2018-09-09-a-osx.pkg
+    x86_64: https://download.swift.org/development/xcode/swift-DEVELOPMENT-SNAPSHOT-2018-09-09-a/swift-DEVELOPMENT-SNAPSHOT-2018-09-09-a-osx.pkg
 version: DEVELOPMENT-SNAPSHOT-2018-09-09-a
