@@ -12,7 +12,7 @@ class VersionManager(object):
 
     @property
     def versions(self):
-        if not self._versions:
+        if self._versions is None:
             version_paths = Path('versions').glob('**/*.yaml')
             version_files = map(str, version_paths)
             versions = map(Version.fromfile, version_files)
@@ -106,7 +106,7 @@ class Version(object):
         """
         Returns if the version has a binary release for the given platform.
         """
-        return platform in self.binaries
+        return platform in self.binaries.keys()
 
     @property
     def path(self):
