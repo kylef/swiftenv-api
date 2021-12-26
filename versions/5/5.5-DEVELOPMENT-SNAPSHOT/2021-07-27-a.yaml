@@ -1,0 +1,4 @@
+binaries:
+  windows10:
+    x86_64: https://download.swift.org/swift-5.5-branch/windows10/swift-5.5-DEVELOPMENT-SNAPSHOT-2021-07-27-a/swift-5.5-DEVELOPMENT-SNAPSHOT-2021-07-27-a-windows10.exe
+version: 5.5-DEVELOPMENT-SNAPSHOT-2021-07-27-a
