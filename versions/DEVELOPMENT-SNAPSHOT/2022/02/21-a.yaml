@@ -1,0 +1,14 @@
+binaries:
+  amazonlinux2:
+    x86_64: https://download.swift.org/development/amazonlinux2/swift-DEVELOPMENT-SNAPSHOT-2022-02-21-a/swift-DEVELOPMENT-SNAPSHOT-2022-02-21-a-amazonlinux2.tar.gz
+  centos7:
+    x86_64: https://download.swift.org/development/centos7/swift-DEVELOPMENT-SNAPSHOT-2022-02-21-a/swift-DEVELOPMENT-SNAPSHOT-2022-02-21-a-centos7.tar.gz
+  centos8:
+    x86_64: https://download.swift.org/development/centos8/swift-DEVELOPMENT-SNAPSHOT-2022-02-21-a/swift-DEVELOPMENT-SNAPSHOT-2022-02-21-a-centos8.tar.gz
+  osx:
+    x86_64: https://download.swift.org/development/xcode/swift-DEVELOPMENT-SNAPSHOT-2022-02-21-a/swift-DEVELOPMENT-SNAPSHOT-2022-02-21-a-osx.pkg
+  ubuntu1804:
+    x86_64: https://download.swift.org/development/ubuntu1804/swift-DEVELOPMENT-SNAPSHOT-2022-02-21-a/swift-DEVELOPMENT-SNAPSHOT-2022-02-21-a-ubuntu1804.tar.gz
+  ubuntu2004:
+    x86_64: https://download.swift.org/development/ubuntu2004/swift-DEVELOPMENT-SNAPSHOT-2022-02-21-a/swift-DEVELOPMENT-SNAPSHOT-2022-02-21-a-ubuntu2004.tar.gz
+version: DEVELOPMENT-SNAPSHOT-2022-02-21-a
