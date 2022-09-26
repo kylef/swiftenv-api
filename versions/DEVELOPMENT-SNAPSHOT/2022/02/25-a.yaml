@@ -1,0 +1,4 @@
+binaries:
+  centos8:
+    x86_64: https://download.swift.org/development/centos8/swift-DEVELOPMENT-SNAPSHOT-2022-02-25-a/swift-DEVELOPMENT-SNAPSHOT-2022-02-25-a-centos8.tar.gz
+version: DEVELOPMENT-SNAPSHOT-2022-02-25-a
