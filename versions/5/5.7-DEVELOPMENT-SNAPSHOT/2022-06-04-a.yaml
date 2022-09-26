@@ -1,0 +1,14 @@
+binaries:
+  amazonlinux2:
+    x86_64: https://download.swift.org/swift-5.7-branch/amazonlinux2/swift-5.7-DEVELOPMENT-SNAPSHOT-2022-06-04-a/swift-5.7-DEVELOPMENT-SNAPSHOT-2022-06-04-a-amazonlinux2.tar.gz
+  centos7:
+    x86_64: https://download.swift.org/swift-5.7-branch/centos7/swift-5.7-DEVELOPMENT-SNAPSHOT-2022-06-04-a/swift-5.7-DEVELOPMENT-SNAPSHOT-2022-06-04-a-centos7.tar.gz
+  osx:
+    x86_64: https://download.swift.org/swift-5.7-branch/xcode/swift-5.7-DEVELOPMENT-SNAPSHOT-2022-06-04-a/swift-5.7-DEVELOPMENT-SNAPSHOT-2022-06-04-a-osx.pkg
+  ubuntu18.04:
+    x86_64: https://download.swift.org/swift-5.7-branch/ubuntu1804/swift-5.7-DEVELOPMENT-SNAPSHOT-2022-06-04-a/swift-5.7-DEVELOPMENT-SNAPSHOT-2022-06-04-a-ubuntu18.04.tar.gz
+  ubuntu20.04:
+    x86_64: https://download.swift.org/swift-5.7-branch/ubuntu2004/swift-5.7-DEVELOPMENT-SNAPSHOT-2022-06-04-a/swift-5.7-DEVELOPMENT-SNAPSHOT-2022-06-04-a-ubuntu20.04.tar.gz
+  windows10:
+    x86_64: https://download.swift.org/swift-5.7-branch/windows10/swift-5.7-DEVELOPMENT-SNAPSHOT-2022-06-04-a/swift-5.7-DEVELOPMENT-SNAPSHOT-2022-06-04-a-windows10.exe
+version: 5.7-DEVELOPMENT-SNAPSHOT-2022-06-04-a
