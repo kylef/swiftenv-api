@@ -1,0 +1,4 @@
+binaries:
+  windows10:
+    x86_64: https://download.swift.org/development/windows10/swift-DEVELOPMENT-SNAPSHOT-2022-06-08-a/swift-DEVELOPMENT-SNAPSHOT-2022-06-08-a-windows10.exe
+version: DEVELOPMENT-SNAPSHOT-2022-06-08-a
